@@ -25,6 +25,3 @@ View at [Docker Hub](https://hub.docker.com/r/bluesky335/json-formatter)
 `npm install`
 
 `npm run dev`
-
-## License
-[MIT License](./LICENSE)
