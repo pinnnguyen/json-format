@@ -5,8 +5,6 @@
 # JSON Formatter
 A lite web app to format and preview json string.
 
-**[Try it on line](https://bluesky335.github.io/json-formatter-website/)**
-
 <p align="center">
   <img width="800" lt="logo" src="./screenshot/screenshot.png" class="logo">
 </p>
@@ -27,6 +25,3 @@ View at [Docker Hub](https://hub.docker.com/r/bluesky335/json-formatter)
 `npm install`
 
 `npm run dev`
-
-## License
-[MIT License](./LICENSE)
