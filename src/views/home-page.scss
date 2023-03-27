@@ -1,0 +1,115 @@
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  height: 5rem;
+  display: flex;
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+.editor {
+  text-align: left;
+  border-radius: 1rem;
+  height: 95vh;
+  max-height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+
+  .main {
+    justify-content: space-between;
+    align-items: stretch;
+    height: calc(100% - 5rem);
+    width: 100%;
+    position: relative;
+
+    .togle-button {
+      z-index: 100001;
+      cursor: pointer;
+      transition: left 0.3s ease-in-out;
+      border-radius: 0.5rem;
+      position:absolute;
+      padding: 0 5px;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      top: 0.5rem;
+      img {
+        width: 2rem;
+      }
+    }
+
+    .json-editor {
+      position: absolute;
+      display: flex;
+      transition: width 0.3s ease-in-out;
+      flex-direction: column;
+      box-shadow: rgba(0, 0, 0, 0.2) 0 0 15px inset;
+      height: 100%;
+
+      .tool-bar {
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        border-bottom: 1px solid #ddd;
+        > * {
+          margin-left: 10px;
+        }
+        button {
+          border: none;
+          background-color: white;
+          box-shadow: #bbb 1px 1px 5px;
+          border-radius: 3px;
+          font-size: 0.9rem;
+          cursor: pointer;
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+      }
+
+      .code-editor {
+        height: calc(100% - 3rem);
+      }
+    }
+    .json-preview {
+      background-color: white;
+      position: absolute;
+      transition: left 0.3s ease-in-out;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      padding: 4rem 1rem 1rem 1rem;
+      height: calc(100% - 5rem - 2px);
+      z-index: 100000;
+    }
+  }
+  .main-open {
+    .togle-button {
+      left: calc(41% + 1rem);
+    }
+    .json-editor {
+      width: 41%;
+    }
+    .json-preview {
+      left: 41%;
+      right: 0;
+    }
+  }
+
+  .main-close {
+    .togle-button {
+      left: calc(0% + 1rem);
+    }
+    .json-editor {
+      width: 41%;
+    }
+    .json-preview {
+      left: 0;
+      right: 0;
+    }
+  }
+}
